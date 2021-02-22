@@ -31,7 +31,7 @@ return [
         'worker_num' => swoole_cpu_num(),
         'pid_file' => BASE_PATH . '/runtime/hyperf.pid',
         'open_tcp_nodelay' => true,
-        'max_coroutine' => 100000,
+        'max_coroutine' => 100,
         'open_http2_protocol' => true,
         'max_request' => 100000,
         'socket_buffer_size' => 2 * 1024 * 1024,
