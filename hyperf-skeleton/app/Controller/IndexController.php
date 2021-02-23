@@ -21,6 +21,7 @@ class IndexController extends AbstractController
         return [
             'method' => $method,
             'message' => "Hello {$user}.",
+            'time' => date('Y-m-d H:i:s')
         ];
     }
 }
