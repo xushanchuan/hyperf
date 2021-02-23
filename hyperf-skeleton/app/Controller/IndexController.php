@@ -22,7 +22,7 @@ class IndexController extends AbstractController
             'method' => $method,
             'message' => "Hello {$user}.",
             'date_time' => date('Y-m-d H:i:s'),
-            'rand' => random_int(100,999)
+            'rand_int' => random_int(100,999),
         ];
     }
 }
