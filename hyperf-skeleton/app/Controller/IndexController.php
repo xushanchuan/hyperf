@@ -25,4 +25,12 @@ class IndexController extends AbstractController
             'rand_int' => random_int(100,999),
         ];
     }
+
+    public function json()
+    {
+        $returnData = [
+            'key' => 'value'
+        ];
+        return $this->response->json($returnData);
+    }
 }
