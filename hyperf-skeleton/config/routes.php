@@ -18,6 +18,8 @@ Router::get('/raw','App\Controller\IndexController@raw');
 Router::get('/xml','App\Controller\IndexController@xml');
 Router::get('/cookie','App\Controller\IndexController@cookie');
 
+Router::get('/user/{user_id}','App\Controller\UserController@getUserById');
+
 Router::get('/favicon.ico', function () {
     return '';
 });

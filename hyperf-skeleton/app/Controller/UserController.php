@@ -1,0 +1,24 @@
+<?php
+
+
+namespace App\Controller;
+
+
+use App\Service\UserService;
+
+class UserController extends AbstractController
+{
+    private $service;
+
+    public function __construct(UserService $service)
+    {
+        $this->service = $service;
+    }
+
+    public function getUserById($userId)
+    {
+//        $userId = $this->request->input('user_id');
+        $user = $this->service->getBy($userId);
+        return $this->response->json($user);
+    }
+}
