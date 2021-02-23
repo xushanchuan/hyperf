@@ -21,7 +21,8 @@ class IndexController extends AbstractController
         return [
             'method' => $method,
             'message' => "Hello {$user}.",
-            'date_time' => date('Y-m-d H:i:s')
+            'date_time' => date('Y-m-d H:i:s'),
+            'rand' => random_int(100,999)
         ];
     }
 }
