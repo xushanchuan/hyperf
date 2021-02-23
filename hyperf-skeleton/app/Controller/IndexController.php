@@ -11,6 +11,8 @@ declare(strict_types=1);
  */
 namespace App\Controller;
 
+use Hyperf\HttpMessage\Cookie\Cookie;
+
 class IndexController extends AbstractController
 {
     public function index()
@@ -32,5 +34,24 @@ class IndexController extends AbstractController
             'key' => 'value'
         ];
         return $this->response->json($returnData);
+    }
+
+    public function xml()
+    {
+        $returnData = [
+            'key' => 'value'
+        ];
+        return $this->response->xml($returnData);
+    }
+
+    public function raw()
+    {
+        return $this->response->raw('hello hyperf');
+    }
+
+    public function cookie()
+    {
+        $cookie = new Cookie('key', 'value');
+        return $this->response->withCookie($cookie)->withContent('Hello Hyperf.');
     }
 }
