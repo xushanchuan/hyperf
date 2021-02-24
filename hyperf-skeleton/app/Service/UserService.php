@@ -25,8 +25,7 @@ class UserService
 
     public function getById($userId)
     {
-        echo $userId;
-        $user = User::query()->first();
+        $user = User::query()->where('id',$userId)->first();
         if($user){
             return $user->toArray();
         }

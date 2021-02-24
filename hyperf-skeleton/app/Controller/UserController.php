@@ -36,4 +36,13 @@ class UserController extends AbstractController
     {
         return User::query()->first()->toArray();
     }
+
+    public function test2()
+    {
+        $user = User::query()->first();
+        if($user){
+            return $user->toArray();
+        }
+        return null;
+    }
 }

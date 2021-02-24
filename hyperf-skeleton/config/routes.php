@@ -20,6 +20,7 @@ Router::get('/cookie','App\Controller\IndexController@cookie');
 
 Router::get('/user/{userId}','App\Controller\UserController@getUserById');
 Router::get('/user/test/test','App\Controller\UserController@test');
+Router::get('/user/test/test2','App\Controller\UserController@test2');
 
 Router::get('/favicon.ico', function () {
     return '';
