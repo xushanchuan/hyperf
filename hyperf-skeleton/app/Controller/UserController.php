@@ -23,7 +23,7 @@ class UserController extends AbstractController
         $this->logger = $loggerFactory->get('log', 'default');
     }
 
-    public function getUserById($userId)
+    public function getUserById(int $userId)
     {
 //        $userId = $this->request->input('user_id');
         $this->logger->info("Your log message.");
