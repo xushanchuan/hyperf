@@ -38,6 +38,7 @@ class UserService
     {
         $this->logger->info("CCC:".$userId);
         $user = User::query()->where('id',$userId)->first();
+        $this->logger->info($user);
         if($user){
             return $user->toArray();
         }
