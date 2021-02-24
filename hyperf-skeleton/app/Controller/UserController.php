@@ -25,6 +25,6 @@ class UserController extends AbstractController
 
     public function test()
     {
-        return User::query()->get()->toArray();
+        return User::query()->first()->toArray();
     }
 }
