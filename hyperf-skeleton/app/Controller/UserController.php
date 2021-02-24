@@ -37,6 +37,7 @@ class UserController extends AbstractController
     public function test2()
     {
         $user = User::query()->first();
+        $arr = ['aa'=>'nn'];
         return $this->response->json($user);
     }
 }
