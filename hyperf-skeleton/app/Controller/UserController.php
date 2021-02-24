@@ -26,11 +26,11 @@ class UserController extends AbstractController
 //        $this->service = $service;
 //    }
 //
-//    public function getUserById(int $userId)
-//    {
-//        $user = $this->service->getById($userId);
-//        return $user;
-//    }
+    public function getUserById(int $userId)
+    {
+        $user = $this->userService->getById($userId);
+        return $user;
+    }
 //
 //    public function test()
 //    {
