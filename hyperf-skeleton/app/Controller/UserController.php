@@ -29,7 +29,7 @@ class UserController extends AbstractController
     public function getUserById(int $userId)
     {
         $user = $this->userService->getById($userId);
-        return $user;
+        return $this->response->json($user);
     }
 //
 //    public function test()
