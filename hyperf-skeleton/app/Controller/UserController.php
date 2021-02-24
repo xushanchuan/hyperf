@@ -18,7 +18,7 @@ class UserController extends AbstractController
     public function getUserById($userId)
     {
 //        $userId = $this->request->input('user_id');
-        $user = $this->service->getBy($userId);
+        $user = $this->service->getById($userId);
         return $this->response->json($user);
     }
 }

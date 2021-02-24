@@ -22,4 +22,13 @@ class UserService
         }
         return null;
     }
+
+    public function getById($userId)
+    {
+        $user = User::query()->where('id',$userId)->first();
+        if($user){
+            return $user->toArray();
+        }
+        return null;
+    }
 }
