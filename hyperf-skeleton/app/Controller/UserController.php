@@ -10,6 +10,9 @@ use Hyperf\Logger\LoggerFactory;
 
 class UserController extends AbstractController
 {
+    /**
+     * @var UserService 
+     */
     private $service;
 //
     /**
