@@ -6,14 +6,25 @@ namespace App\Service;
 
 use App\Model\User;
 use Hyperf\Cache\Annotation\Cacheable;
+use Hyperf\Logger\LoggerFactory;
 
 class UserService
 {
     /**
-     * @Cacheable(prefix="user", ttl=300, listener="user-update")
-     * @param $userId
-     * @return array|null
+     * @var \Psr\Log\LoggerInterface
      */
+    protected $logger;
+
+    public function __construct(LoggerFactory $loggerFactory)
+    {
+        $this->logger = $loggerFactory->get('log', 'default');
+    }
+
+//    /**
+//     * @Cacheable(prefix="user", ttl=300, listener="user-update")
+//     * @param $userId
+//     * @return array|null
+//     */
 //    public function getBy($userId)
 //    {
 //        $user = User::query()->where('id',$userId)->first();
@@ -25,6 +36,7 @@ class UserService
 
     public function getById($userId)
     {
+        $this->logger->info("CCC:".$userId);
         $user = User::query()->where('id',$userId)->first();
         if($user){
             return $user->toArray();
