@@ -29,6 +29,8 @@ class UserController extends AbstractController
 //        $this->logger->info("Your log message.");
         $this->logger->info("BBB:".$userId);
         $user = $this->service->getById($userId);
+
+        $this->logger->info('最终返回');
         return $this->response->json($user);
     }
 
