@@ -11,19 +11,15 @@ use Hyperf\Logger\LoggerFactory;
 class UserController extends AbstractController
 {
     /**
-     * @var UserService 
+     * @var UserService
      */
     private $service;
 //
-    /**
-     * @var \Psr\Log\LoggerInterface
-     */
-    protected $logger;
+
 //
-    public function __construct(UserService $service,LoggerFactory $loggerFactory)
+    public function __construct(UserService $service)
     {
         $this->service = $service;
-        $this->logger = $loggerFactory->get('log', 'default');
     }
 //
 //    public function getUserById(int $userId)
