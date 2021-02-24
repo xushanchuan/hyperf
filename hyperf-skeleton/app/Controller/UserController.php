@@ -31,7 +31,7 @@ class UserController extends AbstractController
         $user = $this->service->getById($userId);
 
         $this->logger->info('最终返回');
-        $this->logger->info($user);
+        $this->logger->info(json_encode($user));
         return $this->response->json($user);
     }
 
