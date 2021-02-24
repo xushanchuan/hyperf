@@ -4,6 +4,7 @@
 namespace App\Controller;
 
 
+use App\Model\User;
 use App\Service\UserService;
 
 class UserController extends AbstractController
@@ -20,5 +21,10 @@ class UserController extends AbstractController
 //        $userId = $this->request->input('user_id');
         $user = $this->service->getById($userId);
         return $this->response->json($user);
+    }
+
+    public function test()
+    {
+        return User::query()->get()->toArray();
     }
 }
