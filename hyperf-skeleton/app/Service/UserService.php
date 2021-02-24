@@ -10,15 +10,15 @@ use Hyperf\Logger\LoggerFactory;
 
 class UserService
 {
-    /**
-     * @var \Psr\Log\LoggerInterface
-     */
-    protected $logger;
-
-    public function __construct(LoggerFactory $loggerFactory)
-    {
-        $this->logger = $loggerFactory->get('log', 'default');
-    }
+//    /**
+//     * @var \Psr\Log\LoggerInterface
+//     */
+//    protected $logger;
+//
+//    public function __construct(LoggerFactory $loggerFactory)
+//    {
+//        $this->logger = $loggerFactory->get('log', 'default');
+//    }
 
 //    /**
 //     * @Cacheable(prefix="user", ttl=300, listener="user-update")
